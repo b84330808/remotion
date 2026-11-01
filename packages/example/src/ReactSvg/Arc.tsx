@@ -55,7 +55,7 @@ export const Arc: React.FC<{
 	}
 
 	const move = (orig: number, x: number, y: number): number =>
-		orig + x * tangent.x + y * tangent.y;
+		orig - x * tangent.x - y * tangent.y;
 
 	const leftPointArrow = [
 		move(pointAtLength.x, 0, electronRadius),

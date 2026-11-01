@@ -295,10 +295,10 @@ export const makeArc = ({
 			const dist = Math.sqrt(xDist * xDist + yDist * yDist);
 
 			if (fractionLength < length - point_dist) {
-				return {x: -xDist / dist, y: -yDist / dist};
+				return {x: xDist / dist, y: yDist / dist};
 			}
 
-			return {x: xDist / dist, y: yDist / dist};
+			return {x: -xDist / dist, y: -yDist / dist};
 		},
 		getTotalLength: () => {
 			return length;
